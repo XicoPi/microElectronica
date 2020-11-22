@@ -1,0 +1,13 @@
+simulacio nmos
+.include mosfet.model
+
+vgs 1 0 5V
+vds 2 0 5V
+Mn 2 1 0 0 nfet L=8u W=40u
+
+.dc vds 0 5 0.1 vgs 0 5 1
+.control
+run
+plot -i(vds)
+.endc
+.end

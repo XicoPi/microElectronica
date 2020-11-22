@@ -1,0 +1,14 @@
+Practica 2 simulació de l'inversor (Tasca 4)
+.include mosfet.model
+vi 1 0 5V
+Vdd 2 0 5V
+Mn 3 1 0 0 nfet W=10u L=8u
+Mp 3 1 2 2 pfet W=40u L=8u
+
+.dc vi 0 5 0.01 
+.control
+run
+plot v(3)
+plot -i(vdd)
+.endc
+.end
