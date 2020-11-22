@@ -1,0 +1,19 @@
+Practica 2 simulació de l'inversor resposta dinamica (Tasca 5)
+.include mosfet.model
+.include inversorCMOS.spice
+
+*Capacitat residual dels transistors
+*CL vo GND 1p
+
+Vinput Vi GND pulse(0 5V 0s 1fs 1fs 10ns 20ns)
+vddfont Vdd GND dc 5V
+.tran 20p 200ns 0 20p
+*.tran printMostresAlTerminal tempsFinal tempsInical SeparacioEntreMostres
+
+*.dc vinput 0 5 0.1 
+.control
+run
+plot v(Vi) v(Vo)
+plot -i(vddfont)
+.endc
+.end

@@ -1,0 +1,9 @@
+* SPICE3 file created from inversorCMOS.ext - technology: scmos
+
+M1000 Vdd Vi Vo Vdd pfet w=3u l=2u
++  ad=19p pd=18u as=19p ps=18u
+M1001 Vo Vi GND Gnd nfet w=3u l=2u
++  ad=19p pd=18u as=19p ps=18u
+C0 Vi Vdd 4.33fF
+C1 GND Gnd 3.38fF
+C2 Vi Gnd 6.45fF
