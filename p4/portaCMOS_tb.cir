@@ -1,0 +1,21 @@
+Primer disseny Custom (cada transistor és dissenyat)
+
+*Capacitat residual dels transistors
+*CL vo GND 1p
+
+VCfont Vc GND pulse(0 5V 0s 1ps 1ps 10ns 20ns)
+VBfont Vb GND pulse(0 5V 0s 1ps 1ps 20ns 40ns)
+VAfont Va GND pulse(0 5v 0s 1ps 1ps 40ns 80ns)
+
+
+
+vddfont Vdd GND dc 5V
+.tran 20p 80ns 0 40p
+*.tran printMostresAlTerminal tempsFinal tempsInical SeparacioEntreMostres
+
+.control
+run
+plot v(Va)+30 v(Vb)+20 v(Vc)+10
+
+.endc
+.end
