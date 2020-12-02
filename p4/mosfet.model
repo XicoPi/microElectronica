@@ -1,0 +1,36 @@
+
+*  Rev 1.01 (31-Mar-88) was the original set.
+*                       It was issued to match as well as possible
+*                       ESPICE results (for short devices L=1.6um)
+*
+*
+*  Rev 1.02 (01-Jul-88) was a correction of CGD,CGS values for 
+*                       SLOW and FAST cases.
+*
+*
+*  Rev 1.03 (29-Sep-88) is identical to 1.02 for Typical case
+*                       but smaller spreads are now used for 
+*                       SLOW and FAST cases.
+*
+*******************************************************************
+*** ECPD15/C3DM * SPICE.2G Lev 2 Rev 1.03 ** JF PEYRE 29-SEP-88 ***
+*******************************************************************
+****************           TYPICAL  CASE           ****************
+ .OPTIONS    TNOM    =   27.00000 
+ .MODEL NFET  NMOS
++ LEVEL   =   2.      TOX     =  2.50E-08   VTO     =    0.70    
++ LD      =   0.325U  NSUB    =  2E+16      GAMMA   =    0.65 
++ UO      = 510.      UEXP    =  0.22       UCRIT   =  24.3K
++ VMAX    =  54K      DELTA   =  0.40       RSH     =  55 
++ NEFF    =   4.0     LAMBDA  =  0.0  NFS =0.0 NSS  =  0.0  XJ =0.4U
++ CJ      = 130U  MJ=0.53 CJSW  = 620P  MJSW=0.53 PB  =  0.68  
++ CGDO    = 320P          CGSO  = 320P        JS      =  2U
+ .MODEL PFET   PMOS
++ LEVEL   =   2.      TOX     =  2.50E-08   VTO     =  -1.1
++ LD      =   0.30U   NSUB    =  5E+16      GAMMA   =   0.87
++ UO      = 210.      UEXP    =  0.33       UCRIT   =  51K
++ VMAX    =  47K      DELTA   =  0.40       RSH     =  75 
++ NEFF    =   0.88    LAMBDA  = 0.0   NFS =0.0 NSS  =  0.0  XJ =0.5U
++ CJ      = 490U  MJ=0.46 CJSW  = 590P  MJSW=0.46 PB  =  0.78  
++ CGDO    = 320P          CGSO  = 320P        JS      = 10U
+*******************************************************************
