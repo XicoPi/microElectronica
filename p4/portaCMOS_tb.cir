@@ -1,4 +1,5 @@
 Primer disseny Custom (cada transistor és dissenyat)
+.include mosfet.model
 
 *Capacitat residual dels transistors
 *CL vo GND 1p
@@ -12,20 +13,20 @@ vddfont Vdd GND dc 5V
 
 *Circuit TRANSISTORS
 *VA Inverter
-MNA Vna Va GND GND nfet W=3u L=2u
-MPA Vna Va Vdd Vdd pfet W=3u L=2u
+MPA 1 Va Vdd Vdd pfet W=3u L=2u
+MNA 1 Va GND GND nfet W=3u L=2u
 
 *PMOS of F = A' + B' * C'
 
-MPNA Vf Vna Vdd Vdd pfet W=3u L=2u
-MPB VcD Vb Vdd Vdd pfet W=3u L=2u
-MPC Vf Vc VcD Vdd pfet W=3u L=2u
+MPNA 3 1 Vdd Vdd pfet W=3u L=2u
+MPB 2 Vb Vdd Vdd pfet W=3u L=2u
+MPC 3 Vc 2 2 pfet W=3u L=2u
 
 *NMOS of F = (A*(B + C))'
 
-MNNA Vf Vna Vcbn GND nfet W=3u L=2u
-MNB Vnas Vb GND GND nfet W=3u L=2u
-MPC Vnas Vc GND GND nfet W=3u L=2u
+MNNA 3 1 4 4 nfet W=3u L=2u
+MNB 4 Vb GND GND nfet W=3u L=2u
+MPC 4 Vc GND GND nfet W=3u L=2u
 
 
 .tran 20p 80ns 0 40p
@@ -33,7 +34,7 @@ MPC Vnas Vc GND GND nfet W=3u L=2u
 
 .control
 run
-plot v(Va)+30 v(Vb)+20 v(Vc)+10 v(Vf)
+plot v(Va)+30 v(Vb)+20 v(Vc)+10 v(1)
 
 .endc
 .end
