@@ -2,11 +2,18 @@ Primer disseny Custom (cada transistor és dissenyat)
 
 *Capacitat residual dels transistors
 *CL vo GND 1p
-
+*INPUTS
 VCfont Vc GND pulse(0 5V 0s 1ps 1ps 10ns 20ns)
 VBfont Vb GND pulse(0 5V 0s 1ps 1ps 20ns 40ns)
 VAfont Va GND pulse(0 5v 0s 1ps 1ps 40ns 80ns)
+Vddfont Vdd GND 5V
 
+*Circuit TRANSISTORS
+*VA Inverter
+MNA Vna Va GND GND nfet W=3u L=2u
+NPA Vna Va Vdd Vdd pfet W=3u L=2u
+
+*PMOS of F = A' + B'*C'
 
 
 vddfont Vdd GND dc 5V
