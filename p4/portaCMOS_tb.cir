@@ -11,10 +11,13 @@ Vddfont Vdd GND 5V
 *Circuit TRANSISTORS
 *VA Inverter
 MNA Vna Va GND GND nfet W=3u L=2u
-NPA Vna Va Vdd Vdd pfet W=3u L=2u
+MPA Vna Va Vdd Vdd pfet W=3u L=2u
 
-*PMOS of F = A' + B'*C'
+*PMOS of F = A' + B' * C'
 
+MPNA Vf Vna Vdd Vdd pfet W=3u L=2u
+MPB VcD Vb Vdd Vdd pfet W=3u L=2u
+MPC Vf Vc VcD VcD pfet W=3u L=2u
 
 vddfont Vdd GND dc 5V
 .tran 20p 80ns 0 40p
