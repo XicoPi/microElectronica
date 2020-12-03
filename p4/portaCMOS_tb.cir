@@ -1,12 +1,12 @@
 Primer disseny Custom (cada transistor és dissenyat)
 .include mosfet.model
 
-*Capacitat residual dels transistors
-*CL vo GND 1p
+*Capacitat residual dels transistors de carrega
+*CL vf GND 0.5pF
 *INPUTS
-VCfont Vc GND pulse(0 5V 0s 1ps 1ps 10ns 20ns)
-VBfont Vb GND pulse(0 5V 0s 1ps 1ps 20ns 40ns)
-VAfont Va GND pulse(0 5v 0s 1ps 1ps 40ns 80ns)
+VCfont Vc GND pulse(0 5V 10ns 1ps 1ps 10ns 20ns)
+VBfont Vb GND pulse(0 5V 20ns 1ps 1ps 20ns 40ns)
+VAfont Va GND pulse(0 5v 40ns 1ps 1ps 40ns 80ns)
 
 *VDD Supply voltage
 vddfont Vdd GND dc 5V
@@ -34,8 +34,8 @@ MPC 4 Vc GND GND nfet W=3u L=2u
 
 .control
 run
-plot v(Va)+30 v(Vb)+20 v(Vc)+10 v(2)
-plot v(4)
+plot v(Va)+30 v(Vb)+20 v(Vc)+10 v(vf)
+plot v(1)
 
 .endc
 .end
