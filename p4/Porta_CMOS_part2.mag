@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1608544210
+timestamp 1608810559
 << nwell >>
 rect -12 -15 13 9
 << polysilicon >>
@@ -9,14 +9,16 @@ rect 1 7 3 9
 rect 6 7 8 9
 rect -5 -5 -3 -4
 rect -7 -7 -3 -5
-rect -7 -25 -5 -7
+rect -7 -16 -5 -7
+rect -12 -19 -5 -16
+rect -7 -25 -5 -19
 rect 1 -25 3 -15
 rect 6 -21 8 -15
 rect 6 -23 11 -21
 rect 9 -25 11 -23
 rect -7 -34 -5 -32
-rect 1 -34 3 -32
-rect 9 -34 11 -32
+rect 1 -40 3 -32
+rect 9 -40 11 -32
 << ndiffusion >>
 rect -8 -32 -7 -25
 rect -5 -32 -4 -25
@@ -38,13 +40,13 @@ rect -12 7 13 9
 rect -12 6 9 7
 rect -12 -4 -10 6
 rect -12 -8 -8 -4
-rect -12 -18 0 -15
-rect -12 -25 -8 -18
+rect -12 -19 0 -15
+rect -12 -25 -8 -19
 rect -4 -25 16 -22
 rect 4 -35 8 -32
 rect -12 -36 15 -35
-rect -12 -38 4 -36
-rect 8 -38 15 -36
+rect -12 -40 4 -36
+rect 8 -40 15 -36
 << ntransistor >>
 rect -7 -32 -5 -25
 rect 1 -32 3 -25
@@ -66,4 +68,11 @@ rect 9 -15 13 7
 rect 4 -40 8 -36
 << nsubstratencontact >>
 rect -12 -12 -8 -8
+<< labels >>
+rlabel metal1 -10 7 -10 7 4 Vdd!
+rlabel psubstratepcontact 5 -36 5 -36 1 GND!
+rlabel polysilicon -6 -19 -6 -19 1 vnA!
+rlabel polysilicon 2 -19 2 -19 1 vB!
+rlabel polysilicon 7 -19 7 -19 1 vC!
+rlabel metal1 -10 -17 -10 -17 3 vF!
 << end >>

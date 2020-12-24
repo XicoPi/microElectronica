@@ -1,6 +1,6 @@
 magic
 tech scmos
-timestamp 1607597412
+timestamp 1608810559
 << nwell >>
 rect -4 -5 9 8
 << polysilicon >>
@@ -20,8 +20,8 @@ rect 4 0 7 1
 << metal1 >>
 rect 0 5 4 8
 rect 8 5 9 8
-rect 4 -8 8 -4
-rect 4 -11 9 -8
+rect 4 -7 8 -4
+rect 4 -11 9 -7
 rect 4 -14 8 -11
 rect 0 -26 4 -23
 rect 8 -26 9 -23
@@ -43,4 +43,5 @@ rect -4 4 0 8
 rlabel metal1 1 6 1 6 5 Vdd!
 rlabel metal1 1 -25 1 -25 1 GND!
 rlabel polysilicon -3 -9 -3 -9 3 vA!
+rlabel metal1 7 -9 7 -9 7 vnA!
 << end >>
