@@ -1,0 +1,24 @@
+* SPICE3 file created from Porta_CMOS.ext - technology: scmos
+
+M1000 a_146_1406# a_144_1404# a_142_1388# Gnd nfet w=7u l=2u
++  ad=21p pd=20u as=105p ps=72u
+M1001 a_142_1388# a_140_1386# a_137_1388# Gnd nfet w=7u l=2u
++  ad=0p pd=0u as=21p ps=20u
+M1002 a_158_1388# a_156_1386# a_142_1388# Gnd nfet w=7u l=2u
++  ad=21p pd=20u as=0p ps=0u
+C0 m2_0_1132# m1_92_124# 13.50fF
+C1 m2_0_1222# m1_92_124# 13.50fF
+C2 m2_0_1312# m1_92_124# 13.50fF
+C3 m2_232_1454# m1_92_124# 13.50fF
+C4 m2_0_1132# m1_76_119# 13.50fF
+C5 m2_0_1222# m1_76_119# 13.50fF
+C6 m2_0_1312# m1_76_119# 13.50fF
+C7 m2_232_1454# m1_76_119# 13.50fF
+C8 m1_92_124# m1_76_119# 702.00fF
+C9 m2_0_1132# Gnd 104.50fF **FLOATING
+C10 m2_0_1222# Gnd 104.50fF **FLOATING
+C11 m2_0_1312# Gnd 104.50fF **FLOATING
+C12 m2_232_1454# Gnd 104.50fF **FLOATING
+C13 m1_92_124# Gnd 7787.04fF **FLOATING
+C14 m1_76_119# Gnd 2605.65fF **FLOATING
+C15 a_142_1388# Gnd 2.07fF

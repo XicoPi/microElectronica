@@ -1,0 +1,24 @@
+Disseny cel·lular
+
+Cèl·la principal: Porta_CMOS.mag
+Subcel·les: Porta_CMOS_part1.mag --> PORTA NOT
+	    Porta_CMOS_part2.mag --> RESTA DE PORTES
+
+$ magic Porta_CMOS.mag
+
+% getcell Porta_CMOS_part1.mag
+% getcell Porta_CMOS_part2.mag
+
+s --> select
+x --> expand: mostra el contingut de la cel·la
+X --> unexpand
+
+e --> edit: (s'ha de seleccionar primer)
+
+----------------
+NO SOLAPAR CEL·LES
+Es pot posar etiquetes dins les cel·les
+
+Vdd! --> Node global
+
+Vdd --> Node local
