@@ -1,24 +1,35 @@
 * SPICE3 file created from Porta_CMOS.ext - technology: scmos
 
-M1000 a_146_1406# a_144_1404# a_142_1388# Gnd nfet w=7u l=2u
-+  ad=21p pd=20u as=105p ps=72u
-M1001 a_142_1388# a_140_1386# a_137_1388# Gnd nfet w=7u l=2u
-+  ad=0p pd=0u as=21p ps=20u
-M1002 a_158_1388# a_156_1386# a_142_1388# Gnd nfet w=7u l=2u
-+  ad=21p pd=20u as=0p ps=0u
-C0 m2_0_1132# m1_92_124# 13.50fF
-C1 m2_0_1222# m1_92_124# 13.50fF
-C2 m2_0_1312# m1_92_124# 13.50fF
-C3 m2_232_1454# m1_92_124# 13.50fF
-C4 m2_0_1132# m1_76_119# 13.50fF
-C5 m2_0_1222# m1_76_119# 13.50fF
-C6 m2_0_1312# m1_76_119# 13.50fF
-C7 m2_232_1454# m1_76_119# 13.50fF
-C8 m1_92_124# m1_76_119# 702.00fF
-C9 m2_0_1132# Gnd 104.50fF **FLOATING
-C10 m2_0_1222# Gnd 104.50fF **FLOATING
-C11 m2_0_1312# Gnd 104.50fF **FLOATING
-C12 m2_232_1454# Gnd 104.50fF **FLOATING
-C13 m1_92_124# Gnd 7787.04fF **FLOATING
-C14 m1_76_119# Gnd 2605.65fF **FLOATING
-C15 a_142_1388# Gnd 2.07fF
+M1000 vF vnA Vdd Vdd pfet w=13u l=2u
++  ad=99p pd=60u as=201p ps=112u
+M1001 Porta_CMOS_part2_0/a_3_n15# vB vF Vdd pfet w=24u l=2u
++  ad=72p pd=54u as=0p ps=0u
+M1002 Vdd vC Porta_CMOS_part2_0/a_3_n15# Vdd pfet w=24u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1003 Porta_CMOS_part2_0/a_n5_n33# vnA GND Gnd nfet w=8u l=2u
++  ad=88p pd=54u as=59p ps=44u
+M1004 vF vB Porta_CMOS_part2_0/a_n5_n33# Gnd nfet w=8u l=2u
++  ad=48p pd=28u as=0p ps=0u
+M1005 Porta_CMOS_part2_0/a_n5_n33# vC vF Gnd nfet w=8u l=2u
++  ad=0p pd=0u as=0p ps=0u
+M1006 vnA vA Vdd Vdd pfet w=3u l=2u
++  ad=19p pd=18u as=0p ps=0u
+M1007 vnA vA GND Gnd nfet w=3u l=2u
++  ad=19p pd=18u as=0p ps=0u
+C0 Vdd vC 14.58fF
+C1 vA GND 14.58fF
+C2 Vdd GND 702.14fF
+C3 vA Vdd 14.46fF
+C4 GND vF 13.50fF
+C5 Vdd vF 15.87fF
+C6 GND vB 13.50fF
+C7 GND vC 13.50fF
+C8 Vdd vnA 4.72fF
+C9 Vdd vB 14.58fF
+C10 vA Gnd 138.14fF
+C11 Vdd Gnd 54.98fF
+C12 GND Gnd 11.70fF
+C13 vF Gnd 6.63fF
+C14 vC Gnd 173.46fF
+C15 vB Gnd 149.92fF
+C16 vnA Gnd 12.62fF

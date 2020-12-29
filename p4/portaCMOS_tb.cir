@@ -1,13 +1,17 @@
 Primer disseny Custom (cada transistor és dissenyat)
 .include mosfet.model
+.include Porta_CMOS.spice
 
 *Capacitat residual dels transistors de carrega
 CL vf GND 0.5pF
-*INPUTS
+**INPUTS
+**cas pitjor de baixada
 VCfont Vc GND 0 pulse(0 5V 10ns 1ps 1ps 10ns 20ns)
 VBfont Vb GND 0 pulse(0 5V 20ns 1ps 1ps 20ns 40ns)
 VAfont Va GND 0 pulse(0 5v 40ns 1ps 1ps 40ns 80ns)
 
+
+**cas pitjor de pujada
 *VCfont Vc GND 0 pulse(0 5V 10ns 1ps 1ps 10ns 20ns)
 *VBfont Vb GND 0 pulse(0 5V 0ns 1ps 1ps 20ns 40ns)
 *VAfont Va GND 0 pulse(0 5v 60ns 1ps 1ps 40ns 80ns)
@@ -15,26 +19,26 @@ VAfont Va GND 0 pulse(0 5v 40ns 1ps 1ps 40ns 80ns)
 
 
 
-*VDD Supply voltage
-*vddfont Vdd GND dc 5V
+**VDD Supply voltage
+**vddfont Vdd GND dc 5V
 vddfont Vdd GND 5V
 
 *Circuit TRANSISTORS
 *VA Inverter
-MPA Van Va Vdd Vdd pfet W=3u L=2u
-MNA Van Va GND GND nfet W=3u L=2u
+*MPA Van Va Vdd Vdd pfet W=3u L=2u
+*MNA Van Va GND GND nfet W=3u L=2u
 
-*PMOS of F = A' + B' * C'
+**PMOS of F = A' + B' * C'
 
-MPNA Vf Van Vdd Vdd pfet W=11u L=2u
-MPB 2 Vb Vdd Vdd pfet W=22u L=2u
-MPC Vf Vc 2 Vdd pfet W=22u L=2u
+*MPNA Vf Van Vdd Vdd pfet W=11u L=2u
+*MPB 2 Vb Vdd Vdd pfet W=22u L=2u
+*MPC Vf Vc 2 Vdd pfet W=22u L=2u
 
-*NMOS of F = (A*(B + C))'
+**NMOS of F = (A*(B + C))'
 
-MNNA Vf Van 4 GND nfet W=7u L=2u
-MNB 4 Vb GND GND nfet W=7u L=2u
-MNC 4 Vc GND GND nfet W=7u L=2u
+*MNNA Vf Van 4 GND nfet W=7u L=2u
+*MNB 4 Vb GND GND nfet W=7u L=2u
+*MNC 4 Vc GND GND nfet W=7u L=2u
 
 
 *.tran 20p 80ns 0 40p
